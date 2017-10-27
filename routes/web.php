@@ -17,3 +17,6 @@
 
 Route::resource('/', 'TacoController');
 Route::get('/{id}/delete', 'TacoController@destroy');
+
+Route::resource('/burger', 'BurgerController');
+Route::get('/burger/{id}/delete', 'BurgerController@destroy');

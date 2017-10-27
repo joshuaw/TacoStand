@@ -1,24 +1,23 @@
 @extends('layouts.tacostand')
 @section('browser_title')
-    Add a Taco
+    Add a Burger
     @endsection
 @section('page_title')
-    <h1>🌮Add a Taco🌮</h1>
+    <h1>🍔 Add a Burger 🍔 </h1>
 @endsection
 
 @section('content')
 
-
-    <a href="/">Back</a>
+    <a href="/burger">Back</a>
 
     <form class="form-horizontal" action="/" method="post">
 
         <fieldset>
 
             <div class="form-group">
-                <label for="shell" class="col-lg-2 control-label">Shell</label>
+                <label for="bun" class="col-lg-2 control-label">Bun</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="shell" name="shell" placeholder="Shell (Soft or Crunchy?)">
+                    <input type="text" class="form-control" id="bun" name="bun" placeholder="Bun">
                 </div>
             </div>
             <div class="form-group">
