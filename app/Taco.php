@@ -32,6 +32,10 @@ class Taco extends Model
 
     public function addMeat($type)
     {
+        if (stristr($type, 'soylent green')){
+            throw new \Exception('Soylent Green is people');
+        }
+
         if (stristr($type, 'rotten')) {
             return false;
         } else {

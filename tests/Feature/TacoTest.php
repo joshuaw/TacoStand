@@ -32,8 +32,6 @@ class TacoTest extends TestCase
 
             $this->assertEquals($taco_ingredient, $taco->{$name}, 'Adding multiple ingredients to a taco');
         }
-
-
     }
 
     /**
@@ -46,9 +44,16 @@ class TacoTest extends TestCase
         $taco->addIngredients(self::getRandomizedIngredients());
 
         $this->assertTrue($taco->save(), 'Saving the taco to the database');
-
-
     }
+
+    public function testCanHaveNoShell()
+    {
+        $taco = new Taco();
+        $taco->addIngredients(self::getRandomizedIngredients());
+        $taco->shell = ' ';
+        $this->assertTrue($taco->save(), 'Saving a taco with no shell');
+    }
+
 
     /**
      * Test that the controller can accept and store a taco via POST
@@ -83,8 +88,8 @@ class TacoTest extends TestCase
      */
     private function getRandomizedIngredients()
     {
-        $meats    = ['Beef', 'Chicken', 'Soylent Green'];
-        $shells   = ['Soft Flour', 'Crunchy'];
+        $meats    = ['Beef', 'Chicken'];
+        $shells   = ['Soft Flour', 'Crunchy', ''];
         $cheeses  = ['Cheddar', 'Queso Fresco'];
         $lettuces = ['Iceberg', 'Red'];
         $sauces   = ['Hot', 'Mild', 'Medium', 'Ghost Pepper'];

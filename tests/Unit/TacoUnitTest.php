@@ -39,12 +39,23 @@ class TacoUnitTest extends TestCase
     }
 
     /**
+     * Test that we can add no shell
+     */
+    public function testCanNoShell()
+    {
+        $taco = new Taco();
+        $type = '';
+        $taco->addShell($type);
+        $this->assertEquals($type, $taco->shell, 'Adding No Shell');
+    }
+
+    /**
      * Test that we can add meat
      */
     public function testCanAddMeat()
     {
         $taco = new Taco();
-        $meat = 'Soylent Green';
+        $meat = 'Beef';
         $taco->addMeat($meat);
         $this->assertEquals($meat, $taco->meat, 'Adding Soylent Green');
     }

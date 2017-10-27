@@ -28,7 +28,7 @@
     @foreach($burgers as $burger)
         <tr>
             <td>{{$burger->id}}</td>
-            <td>{{$burger->shell}}</td>
+            <td>{{$burger->bun}}</td>
             <td>{{$burger->meat}}</td>
             <td>{{$burger->cheese}}</td>
             <td>{{$burger->lettuce}}</td>

@@ -7,7 +7,8 @@
     </title>
 </head>
 <body>
-<div class="container">
+<div class="container" >
+    <img src="Casa Bonita.jpg"/>
     @yield('page_title')
     @if(Session::has('success_message'))
         <div class="alert alert-success">{!! session('success_message') !!}</div>
